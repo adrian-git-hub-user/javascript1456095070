@@ -17,8 +17,7 @@ git add .
 git commit -m "first commit"
 { # your 'try' block
 	git remote rm origin
-} || { # your 'catch' block
-}
+} 
 
 git remote add origin "git@github.com:adrian-git-hub-user/$projectname.git"
 git push -u origin master
