@@ -1,0 +1,31 @@
+<script>
+
+function logText(func) {
+    func();
+}
+
+function consoleLog(){
+    console.log('Functions are first-class in JavaScript!');
+}
+
+function plus1(obj){ 
+   return obj + 1;
+}
+
+arr = [1,2,3]
+
+console.log(arr.map(s => s + 2));
+console.log(arr.reduce( (prev , next) => prev + next));
+console.log(arr.filter(s => s > 2));
+
+console.log(Math.sqrt);
+console.log(arr.map(plus1));
+logText(consoleLog);
+console.log(arr)
+
+var car = [{type:"Fiat", model:"500", color:"white"} , {type:"Fiat", model:"500", color:"black"}];
+console.log(car);
+console.log(car.filter(s => s.color == "black"));
+console.log("All colors : "+car.reduce( (prev , next) => prev.color + ',' + next.color));
+ 
+</script>
