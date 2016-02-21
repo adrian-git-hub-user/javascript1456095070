@@ -1,0 +1,33 @@
+<script src="linear-algebra.js"></script>
+
+<!-- https://github.com/hiddentao/linear-algebra
+ -->
+
+<script>
+
+function log(s){
+	console.log(s);
+}
+
+function matrixToString(data){
+	return data.reduce ( (prev , next) => prev.toString() +'\n' + next.toString() +'\n' )
+}
+
+var l = linearAlgebra();
+var Matrix = l.Matrix;
+var m = new (linearAlgebra()).Matrix([ [1, 2, 3], [4, 5, 6] ]);
+
+log( m.rows );     // 2
+log( m.cols );     // 3
+
+
+log(matrixToString(m.data));    
+
+m = new Matrix([ [1, 2, 3], [4, 5, 6] ]);
+m2 = new Matrix([ [1, 2], [3, 4], [5, 6] ]);
+m3 = m.dot(m2);
+console.log(m3.data);    // [ [22, 28], [49, 64] ]
+
+log(matrixToString(m3.data)); 
+
+</script>
